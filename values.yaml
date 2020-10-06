@@ -1,0 +1,5 @@
+
+# cert-manager/values.yaml at master · jetstack/cert-manager
+# https://github.com/jetstack/cert-manager/blob/master/deploy/charts/cert-manager/values.yaml
+
+installCRDs: true
