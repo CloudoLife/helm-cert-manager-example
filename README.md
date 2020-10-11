@@ -4,6 +4,8 @@ cert-manager is a native Kubernetes certificate management controller. It can he
 
 You can modify it and use cert-manager. There is example about installing it with Helm in the article.
 
+<!-- more -->
+
 ## Prerequisites
 
 - [Kubernetes(K8S)](https://kubernetes.io/)
@@ -54,14 +56,17 @@ See Helm release about cert-manager.
 ```shell
 $ helm list -n cert-manager
 NAME                       	NAMESPACE   	REVISION	UPDATED                               	STATUS  	CHART                            	APP VERSION
-cert-manager	cert-manager	1       	2020-09-25 12:57:30.168666 +0800 +0800	deployed	webhook-alidns-0.1.0             	1.0
+cert-manager               	cert-manager	1       	2020-09-25 11:24:36.704126 +0800 +0800	deployed	cert-manager-v1.0.2              	v1.0.2
 ```
 
 See pods about cert-manager.
 
 ```shell
 $ kubectl get pods -n cert-manager
-...
+NAME                                           READY   STATUS    RESTARTS   AGE
+cert-manager-57b65b7fc-dczgc                   1/1     Running   5          13d
+cert-manager-cainjector-5f988f74c6-9ll6k       1/1     Running   5          13d
+cert-manager-webhook-7cf554f879-ktkmg          1/1     Running   3          13d
 ```
 
 ## References
